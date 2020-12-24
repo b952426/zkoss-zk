@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+B95-ZK-4057.zul
+
+		Purpose:
+
+		Description:
+
+		History:
+				Thu Dec 24 10:19:09 CST 2020, Created by katherinelin
+
+Copyright (C) 2020 Potix Corporation. All Rights Reserved.
+-->
+<zk>
+	<window border="normal" title="hello" apply="pkg$.TestComposer" xmlns:n="native">
+		<n:h2>Auxheader with rowspan and hflex=min column displayed wrong header width:</n:h2>
+		<grid id="grid" class="top-bottom-paging" emptyMessage="No data found">
+			<auxhead>
+				<auxheader label="Auxgroup 1" colspan="3"/>
+				<auxheader label="Auxgroup 2" colspan="4" class="grid-header-divider"/>
+				<auxheader label="Actions" rowspan="2" valign="top" class="grid-header-divider"/>
+			</auxhead>
+			<auxhead>
+				<auxheader label="Col1"/>
+				<auxheader label="Col2"/>
+				<auxheader label="Column 3"/>
+				<auxheader label="Column 4" class="grid-header-divider"/>
+				<auxheader label="Column number 5"/>
+				<auxheader label="Column (6)" style="background: red"/>
+				<auxheader label="Col7"/>
+			</auxhead>
+			<columns>
+				<column width="90px"/>
+				<column id="defaultSortColumn"/>
+				<column width="110px" />
+				<column width="90px"/>
+				<column />
+				<column hflex="min"/>
+				<column width="110px"/>
+				<column width="60px"/>
+			</columns>
+		</grid>
+
+		<separator spacing="30px"/>
+
+		<n:h2>Auxheader wihout rowspan with hflex=min column displays good width but rowspan is missing:</n:h2>
+		<grid id="grid2" class="top-bottom-paging" emptyMessage="No data found">
+			<auxhead>
+				<auxheader label="Auxgroup 1" colspan="3"/>
+				<auxheader label="Auxgroup 2" colspan="4" class="grid-header-divider"/>
+				<auxheader label="Actions" valign="top" class="grid-header-divider"/>
+			</auxhead>
+			<columns>
+				<column label="Col1" width="90px"/>
+				<column label="Col2" id="defaultSortColumn2"/>
+				<column label="Column 3" width="110px" />
+				<column label="Column 4" width="90px"/>
+				<column label="Column number 5" />
+				<column label="Column (6)" hflex="min" style="background: green"/>
+				<column label="Col7" width="110px"/>
+				<column width="60px" style="background: red"/>
+			</columns>
+		</grid>
+	</window>
+</zk>
