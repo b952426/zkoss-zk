@@ -6,6 +6,7 @@ ZK 9.6.0
   ZK-4813: WCAG splitter/splitlayout (collapse="after")
   ZK-3563: Children binding causes load binding to stop firing
   ZK-4814: WCAG splitter/splitlayout not updating (aria-valuenow/-valuelabel) when using mouse
+  ZK-4808: menu click listener ignored (unexpectedly)
 
 * Upgrade Notes
 
